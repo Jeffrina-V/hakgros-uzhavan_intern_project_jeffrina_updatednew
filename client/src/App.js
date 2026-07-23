@@ -75,7 +75,7 @@ function App() {
   const [preview, setPreview] = useState("");
   const [uploadMessage, setUploadMessage] = useState("");
   const [analysis, setAnalysis] = useState(null);
-  const API_BASE = "http://127.0.0.1:5000";
+  const API_BASE = process.env.REACT_APP_API_BASE || "http://127.0.0.1:5000";
 
   const getAuthHeaders = () => ({
     ...(authToken
